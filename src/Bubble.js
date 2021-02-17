@@ -129,9 +129,11 @@ export default ({ children, name, avatar, date, align = 'left' }) => {
           </p>
         )}
       </p>
-      <cite {...colorScheme.set('color', 'textSoft')} {...styles.cite}>
-        {`${name ? name : ''} ${date ? date : ''}`}
-      </cite>
+      {name && (
+        <cite {...colorScheme.set('color', 'textSoft')} {...styles.cite}>
+          {`${name ? name : ''} ${date ? date : ''}`}
+        </cite>
+      )}
     </div>
   )
 }
