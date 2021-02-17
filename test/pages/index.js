@@ -16,16 +16,26 @@ import { withRouter } from 'next/router'
 const schema = createSchema({
   dynamicComponentRequire: createRequire().alias({
     'react-apollo': reactApollo,
-    'graphql-tag': graphqlTag
-  })
+    'graphql-tag': graphqlTag,
+  }),
 })
 const mdast = parse(md)
 
 export default withRouter(({ router }) => {
   return (
-    <Render mdast={router.query.extract
-      ? {...mdast, children: mdast.children.slice(+router.query.extract, +router.query.extract + 1)}
-      : mdast
-    } schema={schema} />
+    <Render
+      mdast={
+        router.query.extract
+          ? {
+              ...mdast,
+              children: mdast.children.slice(
+                +router.query.extract,
+                +router.query.extract + 1
+              ),
+            }
+          : mdast
+      }
+      schema={schema}
+    />
   )
 })

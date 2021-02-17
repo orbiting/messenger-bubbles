@@ -1,23 +1,34 @@
 import React, { Fragment } from 'react'
-import { css } from 'glamor'
-import { mediaQueries } from '@project-r/styleguide'
 
-// const ASSETS_BASE_URL = 'https://cdn.repub.ch/s3/republik-assets/dynamic-components/REPOSLUG/asserts'
+import Bubble from './Bubble'
 
-const Index = ({ text }) => {
-  return (
-    <div
-      {...css({
-        textAlign: 'center',
-        fontSize: '1rem',
-        [mediaQueries.mUp]: {
-          fontSize: '2rem',
-        },
-      })}
-    >
-      {text || 'Hello World'}
-    </div>
-  )
+const Wrapper = ({ messages, alignments = {} }) => {
+  if (messages) {
+    return (
+      <Fragment>
+        {messages.map((message, i) => {
+          const nextMessage = messages[i + 1] || {}
+          return (
+            <Bubble
+              key={i}
+              name={
+                nextMessage.author === message.author
+                  ? undefined
+                  : message.author
+              }
+              align={alignments[message.author]}
+              avatar={message.avatar}
+              date={message.date}
+            >
+              {message.text}
+            </Bubble>
+          )
+        })}
+        <br style={{ clear: 'both' }} />
+      </Fragment>
+    )
+  }
+  return null
 }
 
-export default Index
+export default Wrapper

@@ -32,7 +32,7 @@ Der grosse Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilde
   "props": {
     "text": "EMBDED Edge to Edge"
   },
-  "src": "https://cdn.repub.ch/s3/republik-assets/dynamic-components/REPOSLUG/index.js"
+  "src": "https://cdn.repub.ch/s3/republik-assets/dynamic-components/messenger-bubbles/index.js"
 }
 ```
 
@@ -48,9 +48,61 @@ Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzt
 {
   "autoHtml": false,
   "props": {
-    "text": "EMBDED Center"
+    "alignments": {
+      "Rest der Welt": "right"
+    },
+    "messages": [
+      {
+        "author": "Elon Musik, Unternehmer (Januar 2021)",
+        "text": "Use Signal"
+      },
+      {
+        "author": "Rest der Welt",
+        "text": "🏃‍♀️"
+      }
+    ]
   },
-  "src": "https://cdn.repub.ch/s3/republik-assets/dynamic-components/REPOSLUG/index.js"
+  "src": "https://cdn.repub.ch/s3/republik-assets/dynamic-components/messenger-bubbles/index.js"
+}
+```
+
+<hr /></section>
+
+<section><h6>DYNAMIC_COMPONENT</h6>
+
+```
+{
+  "autoHtml": false,
+  "props": {
+    "alignments": {
+      "Rest der Welt": "right"
+    },
+    "messages": [
+      {
+        "author": "Jan Koum, Whatsapp-CEO (November 2009)",
+        "text": "We have not, we do not and we will not ever sell your personal information to anyone."
+      },
+      {
+        "author": "Jan Koum, Whatsapp-CEO (November 2009)",
+        "text": "Period."
+      },
+      {
+        "author": "Rest der Welt",
+        "date": "(2009)",
+        "text": "👍"
+      },
+      {
+        "author": "Jan Koum, Whatsapp-CEO (November 2009)",
+        "text": "End of story."
+      },
+      {
+        "author": "Rest der Welt",
+        "date": "(2016)",
+        "text": "🤨"
+      }
+    ]
+  },
+  "src": "https://cdn.repub.ch/s3/republik-assets/dynamic-components/messenger-bubbles/index.js"
 }
 ```
 
